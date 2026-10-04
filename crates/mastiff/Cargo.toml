@@ -1,0 +1,11 @@
+[package]
+name = "mastiff"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+argon2 = "0.6.0-rc.8"
+password-hash = "0.6.1"
+rand_core = "0.10.1"
