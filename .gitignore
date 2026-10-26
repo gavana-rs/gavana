@@ -1,2 +1,35 @@
+# Build
 target/
+*.profraw
+*.profdata
+
+# Secrets and local config. DATABASE_URL and MASTIFF_SECRET live here.
+.env
+.env.*
+!.env.example
+
+# Local databases from dev and from prepared's SQLite checks
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# insta writes these while a snapshot is unreviewed; the .snap files are committed
+*.snap.new
+*.pending-snap
+
+# Editors and OS
 .idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Claude Code: instructions and per-user settings stay local
+CLAUDE.md
+.claude/
+
+# Keep: Cargo.lock, .prepared/ (offline query cache), db/schema.sql
